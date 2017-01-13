@@ -15,6 +15,7 @@ $ docker-compose up
 ```
 Start the App:
 ```
+$ npm i
 $ ACCESS_KEY_ID="<...>" SECRET_ACCESS_KEY="<...>" npm start
 ```
 Browse to [http://localhost:8080](http://localhost:8080)
