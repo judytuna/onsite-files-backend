@@ -1,0 +1,8 @@
+mongo:
+  container_name: bc_onsite_mongo
+  image: mongo:3.4.1
+  ports:
+   - "0.0.0.0:27019:27019/tcp"
+  command: mongod --port 27019
+  volumes:
+      - ./data/mongo:/data/db
