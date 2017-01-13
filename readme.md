@@ -8,6 +8,7 @@ To get your basic environment up and running, we assume you've already:
 2. Have node installed locally
 3. Have Docker installed
 4. Obtained AWS Credentials from someone on the team
+5. Installed Node v6
 
 Start Mongo via Docker:
 ```
@@ -20,7 +21,7 @@ $ ACCESS_KEY_ID="<...>" SECRET_ACCESS_KEY="<...>" npm start
 ```
 Browse to [http://localhost:8080](http://localhost:8080)
 
-Frontend code changes will be immediately picked up and hotloaded thanks to Webpack.  Meanwhile, backend code changes will immediately restart your server thanks to Nodemon.
+Backend code changes will immediately restart your server thanks to Nodemon. Front-end changes will require a browser refresh.
 
 ## Server Code Organization
 This repo attempts to simulate some of the coding patterns we use in production today.  We do not make use of any framework in our primary BC server repo.  Instead, our patterns _loosely_ follow  Domain Driven Design as well as [CQRS](https://martinfowler.com/bliki/CQRS.html) (Command Query Responsibility Separation).  This has benefited us in two main ways:
@@ -56,4 +57,3 @@ A few things to keep in mind that our team generally values when we do our own d
 * Most important: Always remember that a great customer experience is all that matters.
 
 Good luck!
-
