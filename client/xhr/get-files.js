@@ -1,4 +1,5 @@
 export default function getFiles({ parentId = '', projectId } = {}) {
-	return fetch(`/api/files?parentId=${parentId || ''}&projectId=${projectId}`)
+	const path = parentId ? `/api/folders/${parentId}/items` : '/api/files'
+	return fetch(path + `?projectId=${projectId}`)
 		.then(response => response.json())
 }
