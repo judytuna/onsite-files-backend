@@ -10,9 +10,10 @@ module.exports = (file, query) => {
     fileData.projectId = query.projectId
     fileData.size = file.size
     fileData.type = 'FILE' //hardcoded for now 
+    fileData.s3Key = file.key
 
     console.log('About to save to db:', fileData.name)
-    
+
 	return model
 		.create(fileData)
 		.call('toObject')

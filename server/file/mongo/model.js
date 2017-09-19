@@ -27,6 +27,9 @@ const schema = new mongoose.Schema({
 		required: true,
 		type: String,
 		enum: ['FILE', 'FOLDER']
+	},
+	s3Key: {
+		type: String
 	}
 })
 
