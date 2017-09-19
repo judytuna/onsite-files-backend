@@ -25,9 +25,9 @@ const schema = new mongoose.Schema({
 	}, 
 	type: {
 		required: true,
-		type: String
+		type: String,
+		enum: ['FILE', 'FOLDER']
 	}
-
 })
 
 module.exports = mongoose.model('File', schema)
